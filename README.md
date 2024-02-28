@@ -1,0 +1,1 @@
+# docker_ubuntu22-dotnet7-opencv4.7.0-opencvsharp-4.7.0_paddle_c2.5.0
