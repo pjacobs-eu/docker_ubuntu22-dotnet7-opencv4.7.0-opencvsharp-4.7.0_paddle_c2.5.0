@@ -1,4 +1,4 @@
-FROM amd64/buildpack-deps:bullseye-curl AS builder
+FROM amd64/buildpack-deps:jammy-curl AS builder
 
 WORKDIR /
 
@@ -35,6 +35,6 @@ RUN apt-get update && apt-get install -y cmake g++ git libgtk2.0-dev pkg-config 
     && rm paddle_inference_c.tgz
 
 # .NET 7 Base
-FROM mcr.microsoft.com/dotnet/runtime:7.0 AS final
+FROM mcr.microsoft.com/dotnet/runtime:7.0-jammy AS final
 COPY --from=builder /usr/lib /usr/lib
 COPY --from=builder /usr/local /usr/local
