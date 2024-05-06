@@ -1,4 +1,4 @@
-FROM amd64/buildpack-deps:jammy-curl AS builder
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 AS builder
 
 WORKDIR /
 
